@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6943FF;
+
+    --border-color: #B295FF;
+
+    --secondary-dark-color: #1f2937;
+    --secondary-light-color: #F4F4F4;
+
+    --dark-color-theme: #1C1C1C;
+    --light-color-theme: #e0e4e0;
+
+    --light-color-button: #ffffff;
+    --dark-color-button: #273549;
+
+    --light-color-text: #5A537B;
+    --dark-color-text: #CCC1FF;
+
+    --white-color: #ffffff;
+    --gray-color: #3D3D3D;
+
+    --white-theme-p: #353535;
+    --dark-theme-p: #FFFFFF;
+
+}
+
+.convertor-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    .convertor {
+        width: 550px;
+        height: 729px;
+
+        display: flex;
+        flex-direction: column;
+
+        .convertor-function {
+
+            flex: 1 0 30%;
+            border-top-left-radius: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            .convertor-function-title {
+                font-family: "Inter", serif;
+                color: var(--white-color);
+                width: bold;
+                font-size: 15px;
+                gap: 15px;
+                
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+
+                .change-theme-button  {
+                    width: 40px;
+                    height: 30px;
+                    border-radius: 5px;
+                    border: none;
+                    font-family: "Inter", serif;
+                }
+            }
+
+            .convertor-function-input input {
+                width: 117px;
+                height: 83px;
+
+                border-radius: 5px;
+                text-align: center;
+
+                font-family: "Inter", serif;
+                font-size: 58px;
+                font-weight: bold;
+            }
+
+            .convertor-function-button button{
+                width: 117px;
+                height: 42px;
+                border-radius: 5px;
+                border: none;
+                font-family: "Inter", serif;
+            }
+        }
+
+        .convertor-result {
+            flex: 2 0 70%;
+            border-bottom-right-radius: 30px;
+
+            .convertor-metrics {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                height: 100%;
+                gap: 20px;
+
+
+
+                .metric-length,
+                .metric-volume,
+                .metric-mass {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    width: 500px;
+                    height: 100px;
+
+                    border-radius: 5px;
+
+                    font-family: "Inter", serif;
+                    font-size: 20px;
+                    font-weight: 600;
+
+                    .metric-result {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.white-theme{
+    background-color: var(--dark-color-theme);
+    .convertor-function {
+        background-color: var(--primary-color);
+        .convertor-function-title {
+            color: var(--white-color);
+            .change-theme-button  {
+                background-color: var(--white-color);
+                color: var(--gray-color);
+            }
+        }
+
+        .convertor-function-input input {
+            color: var(--white-color);
+            background-color: var(--primary-color);
+            border: 2px solid var(--border-color);
+        }
+
+        .convertor-function-button button{
+            background-color: var(--white-color);
+            color: var(--gray-color);
+        }
+    }
+
+    .convertor-result {
+        background-color: var(--secondary-light-color);
+        .convertor-metrics {
+            .metric-length,
+            .metric-volume,
+            .metric-mass {
+                background-color: var(--light-color-theme);
+                color: var(--light-color-text);
+                .metric-result {
+                    color: var(--white-theme-p);
+                }
+            }
+        }
+    }
+}
+
+.dark-theme{
+    background-color: var(--light-color-theme);
+    .convertor-function {
+        background-color: var(--primary-color);
+        .convertor-function-title {
+            color: var(--white-color);
+            .change-theme-button  {
+                background-color: var(--white-color);
+                color: var(--gray-color);
+            }
+        }
+
+        .convertor-function-input input {
+            color: var(--white-color);
+            background-color: var(--primary-color);
+            border: 2px solid var(--border-color);
+        }
+
+        .convertor-function-button button{
+            background-color: var(--white-color);
+            color: var(--gray-color);
+        }
+    }
+
+    .convertor-result {
+        background-color: var(--secondary-dark-color);
+        .convertor-metrics {
+            .metric-length,
+            .metric-volume,
+            .metric-mass {
+                background-color: var(--dark-color-theme);
+                color: var(--dark-color-text);
+                .metric-result {
+                    color: var(--dark-theme-p);
+                }
+            }
+        }
+    }
+}
+
+#theme {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.convertor-function,
+.convertor-result,
+.convertor-metrics .metric-length,
+.convertor-metrics .metric-volume,
+.convertor-metrics .metric-mass {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <div class="convertor-wrapper white-theme" id="theme">
+            <div class="convertor">
+                <div class="convertor-function">
+                    <div class="convertor-function-title">
+                        <h1>Metric/Imperial Unit Conversion</h1>
+                        <button class="change-theme-button">🌙</button>
+                    </div>
+                    <div class="convertor-function-input">
+                        <input type="text" pattern="\d*" placeholder="N" id="convertion-input">
+                    </div>
+                    <div class="convertor-function-button">
+                        <button id="convertion-button">Convert</button>
+                    </div>
+                </div>
+                <div class="convertor-result">
+                    <div class="convertor-metrics">
+                        <div class="metric-length">
+                            <h3>Length (Meter/Feet)</h3>
+                            <p class="metric-result" id="length-result">Result</p>
+                        </div>
+                        <div class="metric-volume">
+                            <h3>Volume (Liters/Gallons)</h3>
+                            <p class="metric-result" id="volume-result">Result</p>
+                        </div>
+                        <div class="metric-mass">
+                            <h3>Mass (Kilograms/Pounds)</h3>
+                            <p class="metric-result" id="mass-result">Result</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
